@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="emailsApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Extract Emails</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+</head>
+<body ng-controller="emailsCtrl">
+  <h1>Extract Emails</h1>
+  <textarea ng-model="text" cols="64" rows="24"></textarea>
+  <ul>
+    <li ng-repeat="(email, num) in extractEmails(text)">
+      {{num}} - {{email}}
+    </li>
+  </ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
